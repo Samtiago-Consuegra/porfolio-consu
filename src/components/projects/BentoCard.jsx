@@ -25,22 +25,22 @@ const BentoCard = ({ project, onClick, className }) => {
             />
 
             {/* Overlay oscuro */}
-            <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-transparent p-6 flex flex-col justify-between">
-                <div>
-                    <h3 className="text-2xl font-bold text-white">
+            <div className="absolute inset-0 flex flex-col justify-between bg-linear-to-r from-black/85 via-black/55 to-transparent p-4 sm:p-6">
+                <div className="min-w-0">
+                    <h3 className="text-xl font-bold text-white sm:text-2xl">
                         {project.title}
                     </h3>
 
-                    <p className="text-sm text-white/70 mt-1">
+                    <p className="mt-1 line-clamp-3 text-xs text-white/70 sm:text-sm md:line-clamp-none">
                         {project.description}
                     </p>
 
                     {/* Stack */}
-                    <div className="flex gap-2 mt-3 flex-wrap">
+                    <div className="mt-3 flex flex-wrap gap-2">
                         {project.stack.map((tech, i) => (
                             <span
                                 key={i}
-                                className="flex items-center gap-2 px-3 py-1 bg-yellow-400/40 rounded-full text-xs text-white"
+                                className="flex items-center gap-1.5 rounded-full bg-yellow-400/40 px-2 py-1 text-[10px] text-white sm:gap-2 sm:px-3 sm:text-xs"
                             >
                                 <FontAwesomeIcon icon={iconMap[tech]} />
                                 {tech}
@@ -50,9 +50,9 @@ const BentoCard = ({ project, onClick, className }) => {
                 </div>
 
                 {/* Botón */}
-                <div className="flex justify-end">
-                    <button className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-yellow-300 transition cursor-pointer">
-                        Ver detalles <FontAwesomeIcon icon={faArrowRight} />
+                <div className="flex justify-end pt-2">
+                    <button type="button" className="cursor-pointer rounded-full bg-yellow-400 px-3 py-2 text-xs font-medium text-black transition hover:bg-yellow-300 sm:px-4 sm:text-sm">
+                        Ver detalles <FontAwesomeIcon icon={faArrowRight} className="ml-1 text-[0.65em] sm:ml-0 sm:text-base" />
                     </button>
                 </div>
             </div>

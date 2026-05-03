@@ -7,7 +7,7 @@ import Skills from "./sections/Skills";
 function App() {
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <AboutMe />
       <Skills />

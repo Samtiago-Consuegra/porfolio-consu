@@ -4,8 +4,8 @@ import { FontAwesomeIcon, faReact, faPython, faJs, faTailwindCss } from "../util
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative w-full overflow-hidden py-15 dark:bg-[#0a0a0a]">
-      <h1 className="uppercase text-white text-center text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl mb-8">
+    <section id="skills" className="relative w-full overflow-hidden bg-white py-12 md:py-16 dark:bg-[#0a0a0a]">
+      <h1 className="mb-6 text-center text-3xl font-bold uppercase tracking-tight text-zinc-900 sm:mb-8 md:text-4xl lg:text-5xl dark:text-white">
         Skills
       </h1>
       <FlowingLogos

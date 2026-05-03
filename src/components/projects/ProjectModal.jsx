@@ -4,48 +4,62 @@ const ProjectModal = ({ project, onClose }) => {
     if (!project) return null;
 
     return (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-[#0a0a0a] text-white max-w-3xl w-full rounded-2xl p-6 relative border border-white/10">
+        <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-modal-title"
+            className="fixed inset-0 z-50 flex max-h-[100dvh] items-end justify-center overflow-y-auto bg-black/80 p-0 backdrop-blur-sm sm:items-center sm:p-4 md:p-6"
+            onClick={onClose}
+        >
+            <div
+                className="relative mt-auto max-h-[92dvh] w-full max-w-3xl overflow-y-auto rounded-t-2xl border border-white/10 bg-[#0a0a0a] p-4 text-white shadow-2xl sm:mt-0 sm:rounded-2xl sm:p-6"
+                onClick={(e) => e.stopPropagation()}
+            >
 
                 {/* Close */}
                 <button
+                    type="button"
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-white/ hover:text-yellow-400 cursor-pointer"
+                    className="absolute right-3 top-3 z-10 flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white/80 transition hover:bg-white/10 hover:text-yellow-400"
+                    aria-label="Cerrar"
                 >
-                    <FontAwesomeIcon icon={faXmark} />
+                    <FontAwesomeIcon icon={faXmark} className="text-xl" />
                 </button>
 
                 {/* Imagen */}
                 <img
                     src={project.image}
-                    className="rounded-xl mb-4"
+                    alt=""
+                    className="mb-4 mt-2 w-full rounded-xl object-cover sm:mt-0"
                 />
 
-                <h2 className="text-2xl font-bold">{project.title}</h2>
-                <p className="text-white/70 mb-4">{project.description}</p>
+                <h2 id="project-modal-title" className="pr-10 text-xl font-bold sm:text-2xl">
+                    {project.title}
+                </h2>
+                <p className="mb-3 text-sm text-white/70 sm:text-base">{project.description}</p>
 
-                <p className="mb-4">{project.details}</p>
+                <p className="mb-4 text-sm leading-relaxed sm:text-base">{project.details}</p>
 
-                <h3 className="text-yellow-400 font-semibold mb-2">
+                <h3 className="mb-2 font-semibold text-yellow-400">
                     CARACTERÍSTICAS
                 </h3>
 
-                <ul className="grid grid-cols-2 gap-2 text-sm">
+                <ul className="grid grid-cols-1 gap-2 text-sm sm:grid-cols-2">
                     {project.features.map((f, i) => (
-                        <li key={i}>• {f}</li>
+                        <li key={i} className="text-balance">• {f}</li>
                     ))}
                 </ul>
 
-                <div className="flex gap-3 mt-6">
-                    <a href="https://porfolio-consu.vercel.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="bg-yellow-400 text-black px-4 py-2 rounded-full cursor-pointer hover:bg-white hover:text-black transition">
-                        Ver Proyecto <FontAwesomeIcon icon={faArrowRight} />
-                    </a>
-                    <a href="https://github.com/Samtiago-Consuegra/porfolio-consu" target="_blank" 
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <a href="https://porfolio-consu.vercel.app/"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-white/20 px-4 py-2 rounded-full cursor-pointer hover:bg-yellow-400 hover:text-black transition">
+                    className="inline-flex min-h-11 items-center justify-center rounded-full bg-yellow-400 px-4 py-2.5 text-center text-sm font-medium text-black transition hover:bg-white hover:text-black">
+                        Ver Proyecto <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                    </a>
+                    <a href="https://github.com/Samtiago-Consuegra/porfolio-consu" target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/20 px-4 py-2.5 text-center text-sm transition hover:bg-yellow-400 hover:text-black">
                         Repositorio
                     </a>
                 </div>

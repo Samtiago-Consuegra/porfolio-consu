@@ -4,7 +4,7 @@ export default function AnimatedTitle({ title }) {
   const words = title.split(" ");
 
   return (
-    <h1 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl uppercase text-white">
+    <h1 className="text-3xl font-bold uppercase tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl dark:text-white">
       {words.map((word, index) => (
         <motion.span
           key={index}

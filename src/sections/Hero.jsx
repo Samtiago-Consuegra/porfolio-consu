@@ -14,7 +14,7 @@ export default function Hero() {
       
       {/* Background */}
       <div
-        className="absolute inset-x-0 top-22 h-64 pointer-events-none"
+        className="pointer-events-none absolute inset-x-0 top-16 h-48 sm:h-56 md:top-16 md:h-64"
         style={{
           maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",
@@ -30,11 +30,11 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative flex min-h-screen flex-col pt-20">
+      <div className="relative flex min-h-screen flex-col pt-16 md:pt-20">
         <Navbar />
 
-        <div className="flex min-h-screen">
-          <div className="flex w-1/2 flex-col items-center justify-center px-6 py-12">
+        <div className="flex min-h-[calc(100dvh-4rem)] w-full flex-col md:min-h-[calc(100dvh-5rem)] md:flex-row">
+          <div className="flex w-full flex-col items-center justify-center px-4 py-8 sm:px-6 sm:py-10 md:w-1/2 md:px-6 md:py-12">
             
             {/* Top label */}
             <motion.div
@@ -49,12 +49,12 @@ export default function Hero() {
             </motion.div>
 
             {/* Title */}
-            <div className="flex flex-col items-center gap-1 text-white">
+            <div className="flex flex-col items-center gap-1">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl md:text-7xl font-black text-center"
+                className="text-center text-4xl font-black text-zinc-900 sm:text-5xl md:text-6xl xl:text-7xl dark:text-white"
               >
                 Santiago
               </motion.h1>
@@ -63,7 +63,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-4xl md:text-7xl font-black text-center text-yellow-400"
+                className="text-center text-4xl font-black text-yellow-500 sm:text-5xl md:text-6xl xl:text-7xl dark:text-yellow-400"
               >
                 Consuegra Bravo
               </motion.h1>
@@ -74,7 +74,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="mt-12 max-w-md text-center text-sm text-zinc-500"
+              className="mt-8 max-w-md px-1 text-center text-sm leading-relaxed text-zinc-600 sm:mt-10 sm:text-base dark:text-zinc-400"
             >
               Ingeniero de Sistemas y Computación con experiencia en soporte técnico,
               automatización de procesos y desarrollo de software. Certificado como Scrum Master
@@ -86,30 +86,30 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="mt-10 flex gap-4"
+              className="mt-8 flex w-full max-w-md flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:justify-center"
             >
               <a
               href="/HV-CONSU-ATS.pdf"
               download="HV-CONSU-ATS.pdf"
-              className="flex items-center gap-2 border-2 border-yellow-200 bg-yellow-400 px-8 py-3 text-xs font-bold uppercase text-black cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black"
+              className="flex w-full min-h-11 items-center justify-center gap-2 border-2 border-yellow-200 bg-yellow-400 px-6 py-3 text-xs font-bold uppercase text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black sm:w-auto sm:px-8"
             >
               Descargar CV
               <FontAwesomeIcon icon={faFileArrowDown} className="text-xl"/>
             </a>
 
-              <div className="text-white text-4xl cursor-pointer flex items-center gap-2">
-                <a href="https://www.linkedin.com/in/santiago-consu" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faSquareLinkedin} className="hover:text-yellow-400 transition-all duration-300 hover:-translate-y-0.5"/></a>
-                <a href="https://github.com/Samtiago-Consuegra" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faSquareGithub} className="hover:text-yellow-400 transition-all duration-300 hover:-translate-y-0.5"/></a>
+              <div className="flex items-center justify-center gap-4 text-3xl text-zinc-800 sm:text-4xl dark:text-white">
+                <a href="https://www.linkedin.com/in/santiago-consu" target="_blank" rel="noopener noreferrer" className="min-h-11 min-w-11 flex items-center justify-center" aria-label="LinkedIn"><FontAwesomeIcon icon={faSquareLinkedin} className="transition-all duration-300 hover:-translate-y-0.5 hover:text-yellow-500 dark:hover:text-yellow-400"/></a>
+                <a href="https://github.com/Samtiago-Consuegra" target="_blank" rel="noopener noreferrer" className="min-h-11 min-w-11 flex items-center justify-center" aria-label="GitHub"><FontAwesomeIcon icon={faSquareGithub} className="transition-all duration-300 hover:-translate-y-0.5 hover:text-yellow-500 dark:hover:text-yellow-400"/></a>
               </div>
 
             </motion.div>
           </div>
 
-            <div className="relative w-1/2">
+            <div className="relative flex w-full min-h-[260px] items-end justify-center sm:min-h-[300px] md:min-h-[calc(100dvh-5rem)] md:w-1/2 md:items-stretch md:justify-end">
                 <img
                   src={FotoConsu}
                   alt="Santiago-foto"
-                  className="h-200 object-cover"
+                  className="h-auto max-h-[38vh] w-full max-w-md object-contain object-bottom sm:max-h-[42vh] md:max-h-[50vh] md:absolute md:inset-0 md:max-h-none md:max-w-none md:h-full md:w-full md:object-cover md:object-[center_top]"
                   style={{
                     maskImage: "linear-gradient(to top, transparent 5%, black 20%)",
                     WebkitMaskImage: "linear-gradient(to top, transparent 5%, black 20%)",
