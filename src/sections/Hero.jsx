@@ -88,14 +88,14 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
               className="mt-10 flex gap-4"
             >
-              <button className="flex items-center gap-2 border-2 border-yellow-200 bg-yellow-400 px-8 py-3 text-xs font-bold uppercase text-black cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black">
-                <a
-                  href="/public/HV-CONSU-ATS.pdf"
-                  download="HV-CONSU-ATS.pdf"
-                >Descargar CV
-                </a> 
-                <FontAwesomeIcon icon={faFileArrowDown} className="text-xl"/>
-              </button>
+              <a
+              href="/HV-CONSU-ATS.pdf"
+              download="HV-CONSU-ATS.pdf"
+              className="flex items-center gap-2 border-2 border-yellow-200 bg-yellow-400 px-8 py-3 text-xs font-bold uppercase text-black cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black"
+            >
+              Descargar CV
+              <FontAwesomeIcon icon={faFileArrowDown} className="text-xl"/>
+            </a>
 
               <div className="text-white text-4xl cursor-pointer flex items-center gap-2">
                 <a href="https://www.linkedin.com/in/santiago-consu" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faSquareLinkedin} className="hover:text-yellow-400 transition-all duration-300 hover:-translate-y-0.5"/></a>
