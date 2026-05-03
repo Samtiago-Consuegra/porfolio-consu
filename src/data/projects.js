@@ -6,16 +6,16 @@ export const projects = [
   {
     id: 1,
     title: "Porfolio Web",
-    description: "Panel analítico en tiempo real para SaaS B2B.",
+    description: "Landing page personal con información sobre mi y mis proyectos.",
     image: PorfolioImg,
     stack: ["React", "JavaScript", "Tailwind", ],
     details:
-      "Dashboard analítico con visualizaciones en tiempo real, exportación de reportes y sistema de alertas.",
+      "Proyecto personal desarrollado con React, Tailwind, Framer Motion y Vite. utilizando la libreria de iconos FontAwesome y libreria de componentes de ScrollX UI, utilizando como IDE Cursor y publicado en Vercel.",
     features: [
-      "Gráficos en tiempo real",
-      "Exportación CSV y PDF",
-      "Roles y permisos",
-      "Modo oscuro/claro",
+      "Información sobre mi",
+      "Mis proyectos",
+      "Mis skills",
+      "Mis contactos",
     ],
   },
   {

@@ -37,12 +37,17 @@ const ProjectModal = ({ project, onClose }) => {
                 </ul>
 
                 <div className="flex gap-3 mt-6">
-                    <button className="bg-yellow-400 text-black px-4 py-2 rounded-full cursor-pointer hover:bg-white hover:text-black transition">
+                    <a href="https://porfolio-consu.vercel.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-yellow-400 text-black px-4 py-2 rounded-full cursor-pointer hover:bg-white hover:text-black transition">
                         Ver Proyecto <FontAwesomeIcon icon={faArrowRight} />
-                    </button>
-                    <button className="border border-white/20 px-4 py-2 rounded-full cursor-pointer hover:bg-yellow-400 hover:text-black transition">
+                    </a>
+                    <a href="https://github.com/Samtiago-Consuegra/porfolio-consu" target="_blank" 
+                    rel="noopener noreferrer"
+                    className="border border-white/20 px-4 py-2 rounded-full cursor-pointer hover:bg-yellow-400 hover:text-black transition">
                         Repositorio
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
