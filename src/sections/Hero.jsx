@@ -89,7 +89,7 @@ export default function Hero() {
               className="mt-8 flex w-full max-w-md flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:justify-center"
             >
               <a
-              href="/HV-CONSU-ATS.pdf"
+              href="/HV-CONSU-ATS-2.pdf"
               download="HV-CONSU-ATS.pdf"
               className="flex w-full min-h-11 items-center justify-center gap-2 border-2 border-yellow-200 bg-yellow-400 px-6 py-3 text-xs font-bold uppercase text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black sm:w-auto sm:px-8"
             >
