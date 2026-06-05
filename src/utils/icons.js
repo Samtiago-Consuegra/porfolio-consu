@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileArrowDown, faEnvelope, faArrowRight, faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 
 // Brands
-import { faSquareLinkedin, faSquareGithub, faReact, faPython, faJs, faTailwindCss, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faSquareLinkedin, faSquareGithub, faReact, faPython, faJs, faTailwindCss, faGithub, faTypescript } from '@fortawesome/free-brands-svg-icons'
 
 // Exportas todo junto
 export {
@@ -20,5 +20,6 @@ export {
   faArrowRight,
   faXmark,
   faBars,
-  faGithub
+  faGithub,
+  faTypescript
 }

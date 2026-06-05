@@ -4,7 +4,8 @@ import { FontAwesomeIcon, faBars, faXmark } from "../utils/icons";
 
 const navLinks = [
   { href: "#about-me", label: "Sobre mi" },
-  { href: "#skills", label: "Skills" },
+  { href: "#skills", label: "Tecnologias" },
+  { href: "#experience", label: "Experiencia" },
   { href: "#projects", label: "Proyectos" },
   { href: "#contact", label: "Contactos" },
 ];
